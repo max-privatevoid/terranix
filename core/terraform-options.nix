@@ -9,8 +9,8 @@ let
   mkMagicMergeOption = { description ? "", example ? { }, default ? { }, ... }:
     mkOption {
       inherit example description default;
-      type = with lib.types;
-        let
+      type = with lib.types; submodule {
+        freeformType = let
           valueType = nullOr
             (oneOf [
               bool
@@ -25,6 +25,7 @@ let
           };
         in
         valueType;
+      };
     };
 in
 {
