@@ -2,7 +2,7 @@
   description = "terranix flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
     terranix-examples.url = "github:terranix/terranix-examples";
     bats-support = {
